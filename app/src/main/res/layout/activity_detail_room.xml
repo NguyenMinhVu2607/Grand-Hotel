@@ -65,20 +65,23 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="-22dp"
         android:fillViewport="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLayout"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_top_corners"
             android:orientation="vertical"
-            android:paddingHorizontal="@dimen/_10ssp"
+            android:paddingHorizontal="@dimen/_12ssp"
             android:paddingTop="@dimen/_16ssp"
-            android:paddingBottom="@dimen/_16ssp">
+            android:paddingBottom="@dimen/_48ssp">
 
             <TextView
                 android:id="@+id/hotel_name"
@@ -90,6 +93,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/map_icon_button"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -121,6 +125,19 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/hotel_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4ssp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="$120 /night"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintEnd_toStartOf="@+id/map_icon_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -219,7 +236,8 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/_6ssp"
+                android:layout_marginTop="@dimen/_2ssp"
+                android:layout_marginBottom="@dimen/_6ssp"
                 app:cardCornerRadius="@dimen/_10ssp"
                 app:strokeWidth="0.8dp">
 
@@ -233,9 +251,22 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
+        android:id="@+id/scrolling_button"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_42ssp"
-        android:layout_gravity="bottom" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/_14ssp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingTop="@dimen/_10ssp"
+        android:paddingBottom="@dimen/_8ssp"
+        android:layout_marginBottom="@dimen/_6ssp"
+        android:background="@drawable/rounded_corner_10dp"
+        android:backgroundTint="@color/main_color"
+        android:gravity="center"
+        android:text="Booking Now"
+        android:textColor="@color/white"
+        android:visibility="visible" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
