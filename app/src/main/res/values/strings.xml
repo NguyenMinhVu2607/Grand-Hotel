@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Grand Hotel</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
+    <string name="find_yourperr">Find Your Perfect Stay, Anytime, Anywhere</string>
+    <string name="title_home">Home</string>
+    <string name="title_my_booking">My Booking</string>
+    <string name="title_message">Message</string>
+    <string name="title_profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="detail_title">Detail</string>
+    <string name="hotel_image_description">Hotel Image</string>
+    <string name="map_location">Map Location</string>
+</resources>

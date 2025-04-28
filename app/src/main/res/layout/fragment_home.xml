@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_14ssp"
+        android:paddingVertical="@dimen/_6ssp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/_32ssp"
+            android:layout_height="@dimen/_32ssp"
+            android:src="@drawable/ic_avt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Matr Kohler"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:layout_marginTop="-4dp"
+            android:drawableStart="@drawable/ic_location_stroke"
+            android:drawablePadding="@dimen/_6ssp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="San Diego, CA"
+            android:textColor="@color/color_78828A"
+            android:textSize="@dimen/_9ssp"
+
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_seacrh"
+            android:tint="@color/black"
+            android:background="@drawable/rounded_corner_6dp_stroke_circle"
+            android:padding="@dimen/_7ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_10ssp"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_10ssp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_10dp"
+                android:backgroundTint="@color/color_E8F2FF"
+                android:paddingHorizontal="@dimen/_6ssp"
+                android:paddingVertical="@dimen/_8ssp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="@dimen/_18ssp"
+                    android:layout_height="@dimen/_18ssp"
+                    android:src="@drawable/ic_loction"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10ssp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="You Can Change Your Location to show nearby villas"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/_14ssp"
+                    android:layout_height="@dimen/_14ssp"
+                    android:src="@drawable/ic_arrown_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Most Popular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+
+                    android:gravity="end"
+                    android:paddingTop="@dimen/_4ssp"
+                    android:text="See All"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recMostPopular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6ssp"
+
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_most_popular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14ssp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Recomended for you"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="end"
+                    android:paddingTop="@dimen/_4ssp"
+                    android:text="See All"
+
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_6ssp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_6ssp"
+                        android:background="@drawable/rounded_corner_6dp"
+                        android:backgroundTint="@color/main_color"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:paddingHorizontal="@dimen/_12ssp"
+                        android:paddingTop="@dimen/_3ssp"
+                        android:paddingBottom="@dimen/_2ssp"
+                        android:text="All"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_6ssp"
+                        android:background="@drawable/rounded_corner_6dp_stroke"
+                        android:drawableStart="@drawable/ic_villa"
+                        android:drawablePadding="@dimen/_6ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingHorizontal="@dimen/_12ssp"
+                        android:paddingTop="@dimen/_3ssp"
+                        android:paddingBottom="@dimen/_2ssp"
+                        android:text="Villas"
+                        android:textColor="@color/color_78828A" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_6ssp"
+                        android:background="@drawable/rounded_corner_6dp_stroke"
+                        android:drawableStart="@drawable/ic_hotel"
+                        android:drawablePadding="@dimen/_6ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingHorizontal="@dimen/_12ssp"
+
+                        android:paddingTop="@dimen/_3ssp"
+                        android:paddingBottom="@dimen/_2ssp"
+                        android:text="Hotels"
+                        android:textColor="@color/color_78828A" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_6ssp"
+                        android:background="@drawable/rounded_corner_6dp_stroke"
+                        android:drawableStart="@drawable/ic_apartement"
+                        android:drawablePadding="@dimen/_6ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingHorizontal="@dimen/_12ssp"
+
+                        android:paddingTop="@dimen/_3ssp"
+                        android:paddingBottom="@dimen/_2ssp"
+                        android:text="Apartement"
+                        android:textColor="@color/color_78828A" />
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recRecoment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6ssp"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_hotel" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14ssp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Hotel  Near You"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="end"
+                    android:paddingTop="@dimen/_4ssp"
+                    android:text="Open Map"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_6ssp"
+                app:cardCornerRadius="@dimen/_10ssp">
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_4ssp"
+    android:layout_marginVertical="@dimen/_6ssp"
+    android:background="@color/white">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5ssp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/_70ssp"
+            android:layout_height="@dimen/_70ssp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_demo" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginHorizontal="@dimen/_10ssp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvNameHotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/trans"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="The Horizon Retreat"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintBottom_toTopOf="@+id/tvLocationHotel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLocationHotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/trans"
+            android:drawableStart="@drawable/ic_location_stroke"
+            android:drawablePadding="@dimen/_4ssp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Los Angeles, CA"
+            android:textColor="@color/color_78828A"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toTopOf="@+id/priceHotel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/priceHotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/trans"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="$480/night"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

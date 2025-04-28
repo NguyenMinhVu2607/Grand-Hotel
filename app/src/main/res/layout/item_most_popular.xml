@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_4ssp"
+    android:layout_marginVertical="@dimen/_1ssp"
+    app:cardCornerRadius="@dimen/_10ssp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="140dp"
+        android:layout_height="190dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_demo" />
+
+        <TextView
+            android:id="@+id/tvNameHotel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4ssp"
+            android:background="@color/trans"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="The Horizon Retreat"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toTopOf="@+id/tvLocationHotel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLocationHotel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4ssp"
+            android:background="@color/trans"
+
+            android:fontFamily="@font/poppins_regular"
+            android:text="Los Angeles, CA"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintBottom_toTopOf="@+id/priceHotel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/priceHotel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4ssp"
+            android:layout_marginBottom="@dimen/_4ssp"
+            android:background="@color/trans"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="$480/night"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
