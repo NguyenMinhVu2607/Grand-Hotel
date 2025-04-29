@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10ssp"
+    android:layout_marginTop="@dimen/_6ssp"
+    android:background="@color/white">
+
+    <!-- Avatar người dùng -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="@dimen/_32ssp"
+        android:layout_height="@dimen/_32ssp"
+        android:src="@drawable/ic_avt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Tên người dùng -->
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10ssp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_6ssp"
+        android:text="Miss Dolores Schowalter"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toEndOf="@id/img_avatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Tin nhắn cuối cùng -->
+    <TextView
+        android:id="@+id/tv_last_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10ssp"
+        android:layout_marginTop="-13dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_6ssp"
+        android:text="Thank you! 😁"
+        android:textColor="@color/color_78828A"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintStart_toEndOf="@id/img_avatar"
+        app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+    <!-- Số lượng tin nhắn chưa đọc -->
+    <TextView
+        android:id="@+id/tv_unread_count"
+        android:layout_width="@dimen/_16ssp"
+        android:layout_height="@dimen/_16ssp"
+        android:layout_marginHorizontal="@dimen/_10ssp"
+        android:background="@drawable/rounded_corner_6dp_stroke_circle"
+        android:backgroundTint="#F45959"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Đường kẻ ngăn cách -->
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#9A9C9D"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

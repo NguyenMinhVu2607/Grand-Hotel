@@ -1,12 +1,12 @@
 package com.example.gpscameratest.ui.detail
 
-import android.util.Log
+import android.content.Intent
 import android.view.MenuItem
-import android.view.View
-import androidx.coordinatorlayout.widget.CoordinatorLayout
-import androidx.core.widget.NestedScrollView
 import com.example.gpscameratest.R
+import com.example.gpscameratest.base.setOnUnDoubleClickListener
 import com.example.gpscameratest.databinding.ActivityDetailRoomBinding
+import com.facebook.shimmer.Shimmer
+import com.facebook.shimmer.Shimmer.AlphaHighlightBuilder
 import com.google.android.material.appbar.AppBarLayout
 import com.moneytracker.moneymanager.moneywallet.activity.base.BaseActivity
 import kotlin.math.abs
@@ -36,35 +36,23 @@ class DetailRoomActivity : BaseActivity<ActivityDetailRoomBinding>(),
         binding.toolbar.post {
             calculateTitleTargetTranslation()
         }
-        binding.nestedScrollView.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { nestedScrollView, scrollX, scrollY, oldScrollX, oldScrollY ->
-            Log.e(
-                "ProductFragment",
-                "position button $oldScrollX scrollY $scrollY"
-            )
 
-            val scrollViewHeight = nestedScrollView.height
-            val childView = nestedScrollView.getChildAt(0)
-            val scrollRange: Int = childView?.height ?: 0 - scrollViewHeight
-            val scrollPercentage = scrollY.toFloat() / scrollRange.toFloat()
+        val shimmer =
+            AlphaHighlightBuilder()
+                .setDuration(2000)
+                .setBaseAlpha(1f)
+                .setHighlightAlpha(0.6f)
+                .setDirection(Shimmer.Direction.LEFT_TO_RIGHT)
+                .setAutoStart(true)
+                .build()
 
+        binding.shimmerLayout.setShimmer(shimmer)
+        binding.shimmerLayout.startShimmer()
 
-            val params = binding.scrollingButton.layoutParams as CoordinatorLayout.LayoutParams
-            binding.scrollingButton.layoutParams = params
-
-            // Tính toán độ mờ (alpha) cho nút, bắt đầu từ 10% (alpha = 0.1) và dần đậm lên 100% (alpha = 1)
-            val alpha = scrollPercentage.coerceIn(0f, 1f) // Đảm bảo alpha nằm trong khoảng từ 0 đến 1
-            binding.scrollingButton.alpha = (alpha * 0.1f + 0.9f) // Đảm bảo nút luôn có alpha ít nhất 0.5 khi bắt đầu
-
-            // Hiển thị nút nếu có cuộn, ẩn nó khi cuộn lên và về vị trí đầu (scrollY == 0)
-            if (scrollY > 0) {
-                binding.scrollingButton.visibility = View.VISIBLE
-            } else {
-                binding.scrollingButton.visibility = View.GONE
-            }
-        })
-
-
-
+        binding.bookingnow.setOnUnDoubleClickListener {
+            val intent = Intent(this, RequestBookingActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun calculateTitleTargetTranslation() {

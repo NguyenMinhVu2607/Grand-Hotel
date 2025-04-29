@@ -26,13 +26,21 @@
         android:theme="@style/Base.Theme.GPSCameraTest"
         tools:targetApi="31">
         <activity
+            android:name=".ui.MyFavorite.MyFavoriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detail.RequestBookingActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.detail.DetailRoomActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".ui.search.SearchActivity"
@@ -43,11 +51,11 @@
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"

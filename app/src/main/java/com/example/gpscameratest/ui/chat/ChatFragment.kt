@@ -5,40 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gpscameratest.R
+import com.example.gpscameratest.base.BaseFragment
+import com.example.gpscameratest.databinding.FragmentChatBinding
+import com.example.gpscameratest.databinding.FragmentProfileBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ChatFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class ChatFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat, container, false)
+class ChatFragment : BaseFragment<FragmentChatBinding>(FragmentChatBinding::inflate) {
+    override fun setUp() {
+        initData()
     }
 
     fun initData() {
+        binding.recyclerView.layoutManager = LinearLayoutManager(context)
+        binding.recyclerView.adapter = ChatAdapter(fakeChats)
 
     }
 
@@ -51,4 +31,19 @@ class ChatFragment : Fragment() {
             return fragment
         }
     }
+
+    val fakeChats = listOf(
+        ChatItem(R.drawable.ic_avt, "Nguyễn Văn A", "Xin chào!", 3),
+        ChatItem(R.drawable.ic_avt, "Trần Thị B", "Cảm ơn bạn 😁", 0),
+        ChatItem(R.drawable.ic_avt, "Lê Minh C", "Hẹn gặp lại.", 1),
+        ChatItem(R.drawable.ic_avt, "Trần Thị B", "Cảm ơn bạn 😁", 0),
+        ChatItem(R.drawable.ic_avt, "Lê Minh C", "Hẹn gặp lại.", 1),
+        ChatItem(R.drawable.ic_avt, "Lê Minh C", "Hẹn gặp lại.", 1),
+        ChatItem(R.drawable.ic_avt, "Trần Thị B", "Cảm ơn bạn 😁", 0),
+        ChatItem(R.drawable.ic_avt, "Lê Minh C", "Hẹn gặp lại.", 1),
+        ChatItem(R.drawable.ic_avt, "Trần Thị B", "Cảm ơn bạn 😁", 0),
+        ChatItem(R.drawable.ic_avt, "Lê Minh C", "Hẹn gặp lại.", 1),
+        ChatItem(R.drawable.ic_avt, "Phạm Văn D", "Đã xem.", 0)
+    )
+
 }

@@ -60,5 +60,6 @@ dependencies {
     implementation "androidx.camera:camera-extensions:${camerax_version}"
     implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
     implementation 'com.google.android.gms:play-services-maps:18.2.0'
-
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation "com.airbnb.android:lottie:6.3.0"
 }

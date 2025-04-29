@@ -1,8 +1,9 @@
 package com.example.gpscameratest.data
 
-data class Hotel(
-    val name: String,
-    val location: String,
-    val price: String,
-    val imageResId: Int
+class Hotel(
+    var name: String,
+    var location: String,
+    var price: String,
+    var rating: Double,
+    var imageResId: Int
 )

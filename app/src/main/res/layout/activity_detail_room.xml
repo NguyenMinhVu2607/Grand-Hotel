@@ -65,7 +65,6 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="-22dp"
@@ -79,9 +78,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_top_corners"
             android:orientation="vertical"
-            android:paddingHorizontal="@dimen/_12ssp"
+            android:paddingHorizontal="@dimen/_10ssp"
             android:paddingTop="@dimen/_16ssp"
-            android:paddingBottom="@dimen/_48ssp">
+            android:paddingBottom="@dimen/_16ssp">
 
             <TextView
                 android:id="@+id/hotel_name"
@@ -93,7 +92,6 @@
                 app:layout_constraintEnd_toStartOf="@+id/map_icon_button"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -125,19 +123,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/hotel_price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_4ssp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="$120 /night"
-                android:textColor="@color/main_color"
-                android:textSize="@dimen/_16ssp"
-                app:layout_constraintEnd_toStartOf="@+id/map_icon_button"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -236,8 +221,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_2ssp"
-                android:layout_marginBottom="@dimen/_6ssp"
+                android:layout_marginVertical="@dimen/_6ssp"
                 app:cardCornerRadius="@dimen/_10ssp"
                 app:strokeWidth="0.8dp">
 
@@ -251,22 +235,54 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <TextView
-        android:id="@+id/scrolling_button"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginHorizontal="@dimen/_14ssp"
-        android:fontFamily="@font/poppins_medium"
+        android:background="@drawable/rounded_top_corners"
+        android:elevation="6dp"
+        android:paddingHorizontal="@dimen/_16ssp"
         android:paddingTop="@dimen/_10ssp"
-        android:paddingBottom="@dimen/_8ssp"
-        android:layout_marginBottom="@dimen/_6ssp"
-        android:background="@drawable/rounded_corner_10dp"
-        android:backgroundTint="@color/main_color"
-        android:gravity="center"
-        android:text="Booking Now"
-        android:textColor="@color/white"
-        android:visibility="visible" />
+        android:paddingBottom="@dimen/_4ssp">
 
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_6ssp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageView10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/bookingnow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_10dp"
+                android:backgroundTint="@color/main_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_10ssp"
+                android:paddingTop="@dimen/_9ssp"
+                android:paddingBottom="@dimen/_6ssp"
+                android:text="Booking Now"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_like"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
