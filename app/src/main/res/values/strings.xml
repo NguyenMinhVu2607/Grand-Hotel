@@ -17,4 +17,44 @@
     <string name="detail_title">Detail</string>
     <string name="hotel_image_description">Hotel Image</string>
     <string name="map_location">Map Location</string>
+
+    <!-- Sign In -->
+    <string name="sign_in_title">Let\'s Sign you in</string>
+    <string name="sign_in_subtitle">Lorem ipsum dolor sit amet, consectetur</string>
+    <string name="email_address_label">Email Address</string>
+    <string name="enter_email_hint">Enter your email address</string>
+    <string name="password_label">Password</string>
+    <string name="enter_password_hint">Enter your password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="sign_in_button">Sign In</string>
+    <string name="no_account_prompt">Don\'t have an account?</string>
+    <string name="sign_up_link">Sign Up</string>
+    <string name="or_sign_in_with">Or Sign in with</string>
+    <string name="sign_in_terms">By signing up you agree to our <![CDATA[<b>Terms</b>]]> and <![CDATA[<b>Conditions of Use</b>]]></string>
+    <string name="google_button_desc">Sign in with Google</string>
+    <string name="apple_button_desc">Sign in with Apple</string>
+    <string name="facebook_button_desc">Sign in with Facebook</string>
+
+    <!-- Sign Up -->
+    <string name="sign_up_title">Create Account</string>
+    <string name="sign_up_subtitle">Lorem ipsum dolor sit amet, consectetur</string>
+    <string name="full_name_label">Full Name</string>
+    <string name="enter_full_name_hint">Enter your name</string>
+    <string name="email_label">E-mail</string> <!-- Using E-mail as per screen 06 -->
+    <string name="enter_email_hint_signup">Enter your email</string> <!-- Slightly different hint text -->
+    <string name="create_account_button">Create An Account</string>
+    <!-- Reusing password_label, enter_password_hint, or_sign_in_with, social button descriptions, sign_in_terms -->
+
+    <!-- Enter OTP -->
+    <string name="otp_title">Enter OTP</string>
+    <string name="otp_subtitle">We have just sent you 4 digit code via your email\nexample@gmail.com</string> <!-- Add \n for line break -->
+    <string name="continue_button">Continue</string>
+    <string name="didnt_receive_code">Didn\'t receive code?</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="otp_box_desc">OTP digit input</string>
+
+    <!-- Common -->
+    <string name="back_button_desc">Back</string>
+    <string name="toggle_password_visibility">Toggle password visibility</string>
 </resources>
